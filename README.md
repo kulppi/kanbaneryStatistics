@@ -7,12 +7,14 @@ Script para conseguir estadísticas de kanbanery
 
 Actualmente retorna estadísticas por tipo de tarea y por usurio
 
+'
   # Resultado de ejmplos
   Email, Name, Time, Estimate Time
   mimail@gmail.com, mkulppi, 68:15, 51:30
   ...
   Task type, Time
   administration, 68:43
+'
 
 ## Instalación
 
