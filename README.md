@@ -30,6 +30,7 @@ En kambanery los títulos de tus tareas deben indicar el tiempo real dedicado a 
 * $HH:MM : Tiempo dedicado individualemte a dicha tarea 
 * @$HH:MM : Tiempo dedicado por todos los integrantes del grupo
 
+    
     # por ejemplo:
     "[API] Crear request para actualizar información del usuario en el servidor $02:45"
   
