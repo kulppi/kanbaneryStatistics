@@ -2,12 +2,13 @@
 
 import requests
 api_token = ""
+project_id = ""
 
-users_url = "https://iic215420141.kanbanery.com/api/v1/projects/45329/users.json?api_token="+api_token
-tasks_url = "https://iic215420141.kanbanery.com/api/v1/projects/45329/tasks.json?api_token="+api_token
-tasks_archive_url = "https://iic215420141.kanbanery.com/api/v1/projects/45329/archive/tasks.json?api_token="+api_token
-estimates_url = "https://iic215420141.kanbanery.com/api/v1/projects/45329/estimates.json?api_token="+api_token
-task_types_url = "https://iic215420141.kanbanery.com/api/v1/projects/45329/task_types.json?api_token="+api_token
+users_url = "https://iic215420141.kanbanery.com/api/v1/projects/"+project_id+"/users.json?api_token="+api_token
+tasks_url = "https://iic215420141.kanbanery.com/api/v1/projects/"+project_id+"/tasks.json?api_token="+api_token
+tasks_archive_url = "https://iic215420141.kanbanery.com/api/v1/projects/"+project_id+"/archive/tasks.json?api_token="+api_token
+estimates_url = "https://iic215420141.kanbanery.com/api/v1/projects/"+project_id+"/estimates.json?api_token="+api_token
+task_types_url = "https://iic215420141.kanbanery.com/api/v1/projects/"+project_id+"/task_types.json?api_token="+api_token
 
 
 users_req = requests.get(users_url)
