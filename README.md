@@ -1,11 +1,10 @@
-kanbaneryStatistics
-===================
-
 # Estadísticas de Kanbanery
+
+## Descripción
 
 Script para conseguir estadísticas de kanbanery
 
-Actualmente retorna estadísticas por tipo de tarea y por usurio
+Actualmente retorna estadísticas por tipo de tarea y por usuario
 
 
     # Resultado de ejemplo
