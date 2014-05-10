@@ -8,7 +8,7 @@ Script para conseguir estadísticas de kanbanery
 Actualmente retorna estadísticas por tipo de tarea y por usurio
 
 
-    # Resultado de ejmplos
+    # Resultado de ejemplo
     Email, Name, Time, Estimate Time
     mimail@gmail.com, mkulppi, 68:15, 51:30
     ...
@@ -20,8 +20,8 @@ Actualmente retorna estadísticas por tipo de tarea y por usurio
 
 Setea tu ApiKey al inicio del archivo
 
-  # correlo mediante
-  request_time_date.py
+    # correlo mediante
+    request_time_date.py
   
 ## Uso
 
@@ -30,8 +30,8 @@ En kambanery los títulos de tus tareas deben indicar el tiempo real dedicado a 
 * $HH:MM : Tiempo dedicado individualemte a dicha tarea 
 * @$HH:MM : Tiempo dedicado por todos los integrantes del grupo
 
-  # por ejemplo:
-  "[API] Crear request para actualizar información del usuario en el servidor $02:45"
+    # por ejemplo:
+    "[API] Crear request para actualizar información del usuario en el servidor $02:45"
   
 ## Futuras implementaciones
 
