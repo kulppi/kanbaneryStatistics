@@ -14,13 +14,17 @@ Actualmente retorna estadísticas por tipo de tarea y por usuario
     Task type, Time
     administration, 68:43
 
+Junto con esto genera dos gráficos usando Google Charts
+uno que considera las tareas adjuntas y otro que no. Por ejemplo
+
+![Image of Chart Example](https://dl.dropboxusercontent.com/u/43408721/example.png)
 
 ## Instalación
 
 Setea tu ApiKey al inicio del archivo
 
-    # correlo mediante
-    request_time_date.py
+    # correr mediante
+   python request_time_data_no_api_token.py
   
 ## Uso
 
@@ -36,7 +40,7 @@ por ejemplo:
 ## Futuras implementaciones
 
 + **Reconocer filtros de categoria** : [Categoría][Subcategoría] , no la unica forma pero la recomendamos altamente por su contexto
-+ **Graficos inmediatos** : El script está diseñador en python, por lo que Bokeh es una librería que hemos pensado, la cual requiere anaconda  
++ **Reconocer filtros por fecha** 
 
 Todo usuario sientase libre de usar esto y agradecemos cualquier aporte para hacer este código más funcional
 
