@@ -66,6 +66,57 @@ def add_times(a, b):
 def is_common_task(task):
     return task["title"].find("@$") != -1
 
+def print_html (users, title):
+    array_t =  ""
+    for x in users:
+        array_t += ("['%s', %f, %f],\n" % (users[x]["email"],
+            users[x]["time"]["h"]+ users[x]["time"]["m"]/60,
+            users[x]["estimate"]["h"]+ users[x]["estimate"]["m"]/60))
+    print(array_t[:-2])
+    
+    template = """
+    <html>
+      <head>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+          google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Mail', 'Time', 'Estimate Time'],
+    """
+    template += array_t[:-2]    
+    template += """
+      ]);
+
+      var options = {
+    """
+    template += "title: 'Team Performance - %s'," % title  
+    template += """
+        hAxis: {title: 'Members', titleTextStyle: {color: 'red'}}
+      };
+
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+
+    }
+        </script>
+      </head>
+      <body>
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+      </body>
+    </html>
+    """
+    # Open a file
+    name = "gchart" + title + ".html"
+    fo = open(name, "wb")
+    fo.write( template);
+    # Close opend file
+    fo.close()
+
+
 for x in tasks_json:
     t = get_time_for_task(x)
     e_t = get_estimate_time_for_task(x, estimates)
@@ -102,6 +153,7 @@ print("Task type, Time")
 for x in task_types:
     print("%s, %i:%i" % (task_types[x]["name"], task_types[x]["time"]["h"],
         task_types[x]["time"]["m"]))
+# print_html(users, "Tasks unarchived")
 
 
 # total task, add archived
@@ -130,4 +182,5 @@ for x in task_types:
     print("%s, %i:%i" % (task_types[x]["name"], task_types[x]["time"]["h"],
         task_types[x]["time"]["m"]))
 
+print_html(users, "with tasks archived")
 
